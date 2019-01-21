@@ -27,7 +27,7 @@ class Firewall
     public function events(string $zoneIdentifier, array $parameters = []): ResponseInterface
     {
         return $this->client->request(
-            'GET', 
+            'GET',
             'zones/'.$zoneIdentifier.'/security/events',
             [
                 'debug' => $this->debug,
