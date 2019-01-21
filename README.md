@@ -46,4 +46,4 @@ $events = $fw->events('zoneid', [
 $logs = $events->getBody()->getContents();
 ```
 
-Additional options can be found in the [Cloudflare API Docs(https://api.cloudflare.com/#firewall-events-properties).
+Additional options can be found in the [Cloudflare API Docs](https://api.cloudflare.com/#firewall-events-properties).
