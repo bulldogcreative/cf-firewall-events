@@ -3,7 +3,6 @@
 namespace Bulldog\Cloudflare;
 
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\RequestException;
 use Psr\Http\Message\ResponseInterface;
 
 class Firewall
