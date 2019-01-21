@@ -9,6 +9,7 @@ use Psr\Http\Message\ResponseInterface;
 class Firewall
 {
     private $client;
+    private $debug = false;
 
     public function __construct(ClientInterface $client)
     {
@@ -22,6 +23,17 @@ class Firewall
      */
     public function events(string $zoneIdentifier): ResponseInterface
     {
-        return $this->client->request('GET', 'zones/'.$zoneIdentifier.'/security/events');
+        return $this->client->request(
+            'GET', 
+            'zones/'.$zoneIdentifier.'/security/events',
+            [
+                'debug' => $this->debug,
+            ]
+        );
+    }
+
+    public function setDebug(bool $debug)
+    {
+        $this->debug = $debug;
     }
 }
