@@ -34,6 +34,9 @@ class Firewall
         );
     }
 
+    /**
+     * @param bool $debug
+     */
     public function setDebug(bool $debug)
     {
         $this->debug = $debug;
